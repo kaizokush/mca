@@ -1,5 +1,8 @@
 <div class="b col-md-12">
-  <div class="categories col-md-6 col-sm-12" >
+  <div class="col-md-3">
+
+  </div>
+  <div class="categories col-md-3 col-sm-12" >
     <h3>Categories</h3>
     <ul>
       <li>Article Writing</li>
@@ -15,8 +18,8 @@
       <li>Tuitions</li>
     </ul>
   </div>
-  <div class="search col-md-6 col-sm-12">
-    <input type="text" name="search" placeholder="Search..">
+  <div class="search col-md-3 col-sm-12">
+    <input type="text" name="search" placeholder="Search.."><br>
     <input type="button" name="search" value="Search">
   </div>
 </div>
@@ -24,21 +27,12 @@
 <div class="mix col-md-12">
     <div class="recent col-md-6 col-sm-12">
       <h4>Recent Posts</h4>
-      <table>
-        <tr>
-          <td><i class="fa fa-camera fa-4x" aria-hidden="true"></i></td>
-          <td>I need a person who can click good photos in my birthday. <br><input type="button" value="Get Details" style="text-align:right"></td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-print fa-4x" aria-hidden="true"></i></td>
-          <td>I have 500 pages document, I need 3copies of each page. I need a person who can print those documents and bring it to me. <br><input type="button" value="Get Details" style="text-align:right"> </td>
-        </tr>
-        <tr>
-          <td><i class="fa fa-money fa-4x" aria-hidden="true"></i></td>
-          <td>I want a person who can pay my telephone bills.<br> <input type="button" value="Get Details" style="text-align:right"></td>
-        </tr>
-      </table>
-
+      <% @posts.each do |post| %>
+        <%= post.title %> <br>
+        <%= post.category %> <br>
+        <%= link_to 'Get Details', post_path(post.id)%><br>
+        <!-- <%= post.author %> -->
+      <% end %>
     </div>
   <div class="trend col-md-6 col-sm-12">
     <h4> Trending jobs</h4>

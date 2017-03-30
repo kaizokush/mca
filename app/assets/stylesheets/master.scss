@@ -41,25 +41,8 @@ ul{
 .categories{
   // border: solid 1px;
 }
-
-// .input[type=text] {
-//     width: 130px;
-//     -webkit-transition: width 0.4s ease-in-out;
-//     transition: width 0.4s ease-in-out;
-// }
-//
-// /* When the input field gets focus, change its width to 100% */
-// input[type=text]:focus {
-//     width: 100%;
-// }
-
-input[type="button"]{
-  margin: 0 auto;
-}
 .search{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .recent{
 
@@ -80,5 +63,11 @@ margin: 0 auto;
 }
 b{
   border:solid 1px;
-
+}
+.container{
+  border: solid .5px;
+  border-radius: 10px
+}
+.container{
+  background: rgba(0,0,50,0)
 }
