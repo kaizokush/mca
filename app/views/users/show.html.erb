@@ -1,12 +1,17 @@
 <div class="col-md-3">
 
-</div>
-<div class="col-md-6 container col-sm-12">
-  <h2 align="center"> <%= @user.name %></h2>
-  <%= @user.posts.each do |post| %>
-      <%= link_to post.title, post_path(post.id) %>
-      <%= link_to 'Apply'%>
-  <% end %>
+  </div>
+<div class="col-md-6 col-sm-12 panel panel-default">
+  <div class="well well-lg well-sm">
+    <h2 align="center"><%= @user.name %></h2>
+  </div>
+  <div class="panel-body">
+      <%= @user.posts.each do |post| %>
+          <%= link_to post.title, post_path(post.id) %>
+          <%= link_to 'Apply'%><br>
+          <%= post.description%>
+      <% end %>
+  </div>
 </div>
 <div class="col-md-3">
 
