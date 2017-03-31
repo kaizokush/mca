@@ -5,13 +5,15 @@
   <div class="well well-lg well-sm">
     <h2 align="center"><%= @user.name %></h2>
   </div>
-  <div class="panel-body">
+
       <%= @user.posts.each do |post| %>
-          <%= link_to post.title, post_path(post.id) %>
+          <div class="panel-body">
+            <%= link_to post.title, post_path(post.id) %>
+          </div>
           <%= link_to 'Apply'%><br>
           <%= post.description%>
       <% end %>
-  </div>
+
 </div>
 <div class="col-md-3">
 
