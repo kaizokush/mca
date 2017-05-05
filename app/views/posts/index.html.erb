@@ -1,40 +1,13 @@
-<div class="b col-md-12">
+<div class="col-md-12">
   <div class="col-md-3">
-  </div>
-  <div class="categories col-md-3 col-sm-12" >
-    <h2><%= User.all.count%></h2>
-    <h4>Users</h4>
-  </div>
-  <div class="search col-md-3 col-sm-12">
-    <h2><%= Post.all.count%></h2>
-    <h4>Posts</h4>
-  </div>
-</div>
 
-<div class="mix col-md-12">
+  </div>
+  <div class="well col-md-6 center">
+    <h3>Monetize your skills with MancheChahiyo</h3> <br>
+    <h4><%= User.all.count%> Users</h4>
+    <%= button_to "Sign Up", new_user_session_path%>
+  </div>
+  <div class="col-md-3">
 
-    <div class="col-md-3">
-    </div>
-    <div class="recent col-md-3 col-sm-12">
-      <h4>Recent</h4>
-      <% @posts.each do |post| %>
-        <%= post.title %> <br>
-        <%= post.category %> <br>
-        <%= link_to 'Get Details', post_path(post.id)%><br>
-        <!-- <%= post.author %> -->
-      <% end %>
-    </div>
-  <div class="trend col-md-6 col-sm-12">
-    <h4>Famous</h4>
-    <table>
-      <tr>
-        <td><i class="fa fa-pencil fa-4x" aria-hidden="true"></i></td>
-        <td>Article writing jobs are mostly preffered</td>
-      </tr>
-      <tr>
-        <td><i class="fa fa-laptop fa-2x" aria-hidden="true"></i> <i class="fa fa-mobile fa-3x" aria-hidden="true"></i></td>
-        <td>Laptop and mobile repairments</td>
-      </tr>
-    </table>
   </div>
 </div>
