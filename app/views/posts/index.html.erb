@@ -16,7 +16,16 @@
 
   </div>
   <div class="well col-md-6 center">
+      <% if user_signed_in? %>
+      <h2>Thank you for signing up at MancheChahiyo!</h2>
+      Benefits you get:
+      <ol>
+        <li>3 months subscription to MancheChahiyo.
+        <li>100 MancheChahiyo Credits.
+      </ol>
+    <% else %>
     <h3>Sign up for FREE today!</h3> <br>
+    <%end%>
   </div>
   <div class="col-md-3">
 
